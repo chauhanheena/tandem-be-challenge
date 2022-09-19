@@ -60,3 +60,6 @@ C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\MediatR.dll
+C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

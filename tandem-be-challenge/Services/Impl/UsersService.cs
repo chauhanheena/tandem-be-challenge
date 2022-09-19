@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MediatR;
 using tandem_be_challenge.DTOs;
 using tandem_be_challenge.Entities;
 using tandem_be_challenge.Exceptions;

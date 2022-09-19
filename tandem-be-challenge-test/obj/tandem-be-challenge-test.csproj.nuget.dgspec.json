@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge\\tandem-be-challenge.csproj": {}
+    "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge-test\\tandem-be-challenge-test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge\\tandem-be-challenge.csproj": {
+    "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge-test\\tandem-be-challenge-test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge\\tandem-be-challenge.csproj",
-        "projectName": "tandem-be-challenge",
-        "projectPath": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge\\tandem-be-challenge.csproj",
+        "projectUniqueName": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge-test\\tandem-be-challenge-test.csproj",
+        "projectName": "tandem-be-challenge-test",
+        "projectPath": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge-test\\tandem-be-challenge-test.csproj",
         "packagesPath": "C:\\Users\\heena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge\\obj\\",
+        "outputPath": "C:\\Users\\heena\\Downloads\\tandem-be-challenge\\tandem-be-challenge-test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\heena\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,37 +40,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
+            "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[11.0.1, )"
+              "version": "[2.2.8, )"
             },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[2.2.8, )"
             },
-            "FluentValidation.AspNetCore": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[11.2.2, )"
+              "version": "[17.1.0, )"
             },
-            "MediatR": {
+            "coverlet.collector": {
               "target": "Package",
-              "version": "[10.0.1, )"
-            },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[10.0.1, )"
-            },
-            "Microsoft.Azure.Cosmos": {
-              "target": "Package",
-              "version": "[3.30.1, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.14.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[3.1.2, )"
             }
           },
           "imports": [
@@ -85,9 +69,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
