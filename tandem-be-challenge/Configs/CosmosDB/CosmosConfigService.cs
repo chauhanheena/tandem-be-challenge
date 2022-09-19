@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.Cosmos;
 using tandem_be_challenge.Entities;
+using tandem_be_challenge.Exceptions;
 
 namespace tandem_be_challenge.Configs.CosmosDB
 {
@@ -14,15 +15,36 @@ namespace tandem_be_challenge.Configs.CosmosDB
 
         public async Task<UserEntity?> AddItemAsync(UserEntity userEntity)
         {
-            return await this.container.CreateItemAsync<UserEntity>
-                (userEntity, new PartitionKey(userEntity.EmailAddress));
+            try
+            {
+                return await this.container.CreateItemAsync(userEntity, new PartitionKey(userEntity.EmailAddress));
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                throw new UserAlreadyExistsException("User already exists");
+            }
+            catch (Exception)
+            {
+                throw new InterenalServerException("Something went wrong");
+            }
         }
 
         public async Task<UserEntity?> GetItemAsyncById(string emailId)
         {
-            ItemResponse<UserEntity> response = await this.container
+            try
+            {
+                ItemResponse<UserEntity> response = await this.container
                 .ReadItemAsync<UserEntity>(emailId, new PartitionKey(emailId));
-            return response.Resource;
+                return response.Resource;
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                throw new UserNotFoundException("User not found");
+            }
+            catch (Exception)
+            {
+                throw new InterenalServerException("Something went wrong");
+            }
         }
     }
 }
