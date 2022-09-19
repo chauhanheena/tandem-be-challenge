@@ -2,6 +2,10 @@
 
 namespace tandem_be_challenge.Entities
 {
+    /// <summary>
+    /// Entity which will store in container.
+    /// Partition key is EmailAddressId.
+    /// </summary>
     public class UserEntity
     {
         [JsonProperty(PropertyName = "userId")]

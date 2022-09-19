@@ -31,7 +31,7 @@ namespace tandem_be_challenge.Handlers
             {
                 throw ex;
             }
-            catch (InterenalServerException ex)
+            catch (InternalServerException ex)
             {
                 throw ex;
             }

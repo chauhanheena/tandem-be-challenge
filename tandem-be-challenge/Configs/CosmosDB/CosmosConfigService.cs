@@ -25,7 +25,7 @@ namespace tandem_be_challenge.Configs.CosmosDB
             }
             catch (Exception)
             {
-                throw new InterenalServerException("Something went wrong");
+                throw new InternalServerException("Something went wrong");
             }
         }
 
@@ -43,7 +43,20 @@ namespace tandem_be_challenge.Configs.CosmosDB
             }
             catch (Exception)
             {
-                throw new InterenalServerException("Something went wrong");
+                throw new InternalServerException("Something went wrong");
+            }
+        }
+
+        public async Task<bool> IsHealthy()
+        {
+            try
+            {
+                await container.ReadContainerAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

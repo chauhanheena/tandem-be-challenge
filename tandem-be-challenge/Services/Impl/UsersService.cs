@@ -5,6 +5,11 @@ using tandem_be_challenge.Queries;
 
 namespace tandem_be_challenge.Services.impl
 {
+    /// <summary>
+    /// Service to handle the business logic for user operations.
+    /// 
+    /// Used mediator.
+    /// </summary>
     public class UsersService : IUsersService
     {
         private readonly IMediator meadiator;

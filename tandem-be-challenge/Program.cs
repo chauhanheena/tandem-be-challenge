@@ -41,6 +41,8 @@ builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 
 builder.Services.AddMediatR(typeof(Program));
 
+builder.Services.AddHealthChecks().AddCheck<CosmosDBHealthCheck>(nameof(CosmosDBHealthCheck));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,6 +57,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/health");
 
 app.Run();
 
