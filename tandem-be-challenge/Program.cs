@@ -1,5 +1,6 @@
 using AutoMapper;
 using FluentValidation.AspNetCore;
+using MediatR;
 using tandem_be_challenge.Configs.CosmosDB;
 using tandem_be_challenge.Mapper;
 using tandem_be_challenge.Repositories;
@@ -37,6 +38,8 @@ builder.Services.AddSingleton(mapper);
 // Injecting repository and service dependency
 builder.Services.AddTransient<IUsersService, UsersService>();
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
+
+builder.Services.AddMediatR(typeof(Program));
 
 var app = builder.Build();
 
