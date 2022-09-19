@@ -55,3 +55,5 @@ C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\obj\Debug\net6.
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\obj\Debug\net6.0\tandem-be-challenge.pdb
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\obj\Debug\net6.0\tandem-be-challenge.genruntimeconfig.cache
 C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\obj\Debug\net6.0\ref\tandem-be-challenge.dll
+C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\heena\Downloads\tandem-be-challenge\tandem-be-challenge\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
