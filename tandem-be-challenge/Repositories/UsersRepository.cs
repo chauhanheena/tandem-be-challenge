@@ -17,5 +17,10 @@ namespace tandem_be_challenge.Repositories.Impl
             UserEntity? response = await cosmosConfigService.AddItemAsync(entity);
             return response;
         }
+
+        public async Task<UserEntity> GetUserByEmailAddress(string emailAddress)
+        {
+            return await cosmosConfigService.GetItemAsyncById(emailAddress);
+        }
     }
 }

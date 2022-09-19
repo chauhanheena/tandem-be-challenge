@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Mime;
 using tandem_be_challenge.DTOs;
 using tandem_be_challenge.Services;
@@ -26,6 +27,16 @@ namespace tandem_be_challenge.Controllers
         {
             UserResponseDTO response = await usersService.CreateUser(usersDTO);
             return Created("/api/users", response);
+        }
+
+        [HttpGet]
+        [Produces(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserResponseDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+        public async Task<IActionResult> GetUserByEmailAddress([Required][FromQuery] string emailAddress)
+        {
+            UserResponseDTO response = await usersService.GetUserByEmailAddress(emailAddress);
+            return Ok(response);
         }
     }
 }

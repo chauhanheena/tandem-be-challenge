@@ -22,5 +22,11 @@ namespace tandem_be_challenge.Services.impl
             UserEntity createdUser = await usersRepository.CreateUser(entity);
             return mapper.Map<UserResponseDTO>(createdUser);
         }
+
+        public async Task<UserResponseDTO> GetUserByEmailAddress(string emailAddress)
+        {
+            UserEntity user = await usersRepository.GetUserByEmailAddress(emailAddress);
+            return mapper.Map<UserResponseDTO>(user);
+        }
     }
 }

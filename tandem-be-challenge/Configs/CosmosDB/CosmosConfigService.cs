@@ -17,5 +17,12 @@ namespace tandem_be_challenge.Configs.CosmosDB
             return await this.container.CreateItemAsync<UserEntity>
                 (userEntity, new PartitionKey(userEntity.EmailAddress));
         }
+
+        public async Task<UserEntity?> GetItemAsyncById(string emailId)
+        {
+            ItemResponse<UserEntity> response = await this.container
+                .ReadItemAsync<UserEntity>(emailId, new PartitionKey(emailId));
+            return response.Resource;
+        }
     }
 }
