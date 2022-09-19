@@ -38,7 +38,6 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddTransient<IUsersService, UsersService>();
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -71,3 +70,5 @@ async Task<CosmosConfigService> InitializeCosmosClientInstanceAsync(IConfigurati
 
     return cosmosDbService;
 }
+
+public partial class Program { }
