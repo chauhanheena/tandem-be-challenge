@@ -20,7 +20,6 @@ namespace tandem_be_challenge.Controllers
         }
 
         [HttpPost]
-        [Consumes(MediaTypeNames.Application.Json)]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(UserResponseDTO))]
         [ProducesResponseType(StatusCodes.Status409Conflict, Type = typeof(string))]

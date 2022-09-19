@@ -1,16 +1,22 @@
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using tandem_be_challenge.Configs.CosmosDB;
 using tandem_be_challenge.Mapper;
 using tandem_be_challenge.Repositories;
 using tandem_be_challenge.Repositories.Impl;
 using tandem_be_challenge.Services;
 using tandem_be_challenge.Services.impl;
+using tandem_be_challenge.Validations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddFluentValidation(s =>
+{
+    s.RegisterValidatorsFromAssemblyContaining<CreateUserRequestValidator>();
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
